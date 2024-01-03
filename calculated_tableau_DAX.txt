@@ -1,0 +1,110 @@
+**Stunting**
+Menghitung Stunting:
+SUM(IF [Zs Tb U] < -2 THEN 1 ELSE 0 END) / COUNT([Zs Tb U]) * 100
+
+Stunting Persen:
+STR(
+    ROUND(
+        ([Stunting]),
+        2
+    )
+) + "%"
+
+Stunting Tooltips <16:
+IF ISNULL([Stunting>16 ]) THEN "Target Terpenuhi: Angka stunting " + 
+    STR([Stunting persen])+" di bawah batas aman 16%. Lanjutkan upaya baik ini!"
+ ELSE STR([Stunting<16]) END
+
+Stunting Tooltips >16:
+IF ISNULL([Stunting<16]) THEN "Di Luar Target: Angka stunting " + STR([Stunting persen])+ " melebihi batas aman 16%. Perlu aksi pencegahan lebih kuat."
+ ELSE  STR([Stunting>16 ]) END
+
+Stunting<16:
+IF ([Stunting])<16 THEN ([Stunting]) END
+
+Stunting>16:
+IF ([Stunting])>16 THEN ([Stunting]) END
+
+
+
+**Wasting**
+Menghitung Wasting:
+SUM(IF [Zs Bb Tb] < -2 THEN 1 ELSE 0 END) / COUNT([Zs Bb Tb]) * 100
+
+Wasting Persen:
+STR(
+    ROUND(
+        ([Wasting]),
+        2
+    )
+) + "%"
+
+Wasting Tooltips <7.3:
+IF ISNULL([Wasting>7.3 ]) THEN "Target Terpenuhi: Angka Wasting " + STR([Wasting persen ])+" di bawah batas aman 7.3%. Lanjutkan upaya baik ini!"
+ ELSE STR([Wasting<7.3]) END
+
+Wasting Tooltips >7.3:
+IF ISNULL([Wasting<7.3]) THEN "Di Luar Target: Angka Wasting " + STR([Wasting persen ])+ " melebihi batas aman 7.3%. Perlu aksi pencegahan lebih kuat."
+  ELSE  STR([Wasting>7.3 ]) END
+
+Wasting<7.3:
+IF ([Wasting])<7.3 THEN ([Wasting]) END
+
+Wasting>7.3:
+IF ([Wasting])>7.3 THEN ([Wasting]) END
+
+
+
+**Underweight**
+Menghitung Underweight:
+SUM(IF [Zs Bb U] < -2 THEN 1 ELSE 0 END) / COUNT([Zs Bb U]) * 100
+
+Underweight Persen:
+STR(
+    ROUND(
+        ([Underweight]),
+        2
+    )
+) + "%"
+
+Underweight Tooltips <13:
+IF ISNULL([Underweight>13]) THEN "Target Terpenuhi: Angka Underweight " + STR([underweight persen ])+" di bawah batas aman 13%. Lanjutkan upaya baik ini!"
+ ELSE STR([Underweight<13]) END
+
+Underweight Tooltips >13:
+IF ISNULL([Underweight<13]) THEN "Di Luar Target: Angka Underweight " + STR([underweight persen ])+ " melebihi batas aman 13%. Perlu aksi pencegahan lebih kuat."
+  ELSE  STR([Underweight>13]) END
+
+Underweight<13:
+IF ([Underweight])<13 THEN ([Underweight]) END
+
+Underweight>7.3:
+IF ([Underweight])>13 THEN ([Underweight]) END
+
+
+
+**Overweight**
+Menghitung Overweight:
+SUM(IF [Zs Bb U] > 2 THEN 1 ELSE 0 END) / COUNT([Zs Bb U]) * 100
+
+Overweight Persen:
+STR(
+    ROUND(
+        ([Overweight]),
+        2
+    )
+) + "%"
+
+Overweight Tooltips <13:
+IF ISNULL([Overweight > 3 ]) THEN "Target Terpenuhi: Angka Overweight " + STR([Overweight persen])+" di bawah batas aman 3%. Lanjutkan upaya baik ini!"
+ ELSE STR([Overweight < 3]) END
+
+Overweight Tooltips >13:
+IF ISNULL([Overweight < 3]) THEN "Di Luar Target: Angka Overweight " + STR([Overweight persen])+ " melebihi batas aman 16%. Perlu aksi pencegahan lebih kuat."
+  ELSE  STR([Overweight > 3 ]) END
+
+Overweight<13:
+IF ([Overweight])<3 THEN ([Overweight]) END
+
+Overweight>7.3:
+IF ([Overweight])>3 THEN ([Overweight]) END
