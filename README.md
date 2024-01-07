@@ -24,5 +24,5 @@ The automated data pipeline ETL (Extract, Transform, Load) application was devel
 
 ## **Visualization**
 The visualization of the nutrition status is presented through the Tableau dashboard, 
-accessible via the following manual book link: [Dashboard Manual Book]([https://www.linkedin.com/in/humaid-assaidi-244421272/](https://drive.google.com/file/d/1HSb8w8hkTvba-mzhwEEUzwx81huVuHLB/view?usp=sharing))
+accessible via the following manual book link: [Dashboard Manual Book](https://drive.google.com/file/d/1HSb8w8hkTvba-mzhwEEUzwx81huVuHLB/view?usp=sharing)
 <p align="center"><img src="https://github.com/fakhriyalfians/Dashboard_Status_Gizi/blob/main/images/dashboard.png" width="500px"></p>
